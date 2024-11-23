@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager UI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-section">
+        <img src="images (1).jpg" alt="Profile Picture" class="profile-pic">
+        <div>
+          <h1>TO-DO LIST</h1>
+          <p>Adarsh P P</p>
+        </div>
+      </div>
+      <ul class="sidebar-menu" id="filterMenu">
+        <li>Today tasks</li>
+        <li><span class="dot personal"></span> Personal</li>
+        <li><span class="dot freelance"></span> Freelance</li>
+        <li><span class="dot work"></span> Work</li>
+        <li id="addFilterBtn">Add Filter</li> <!-- Add Filter button -->
+        <input type="color" id="colorPicker" style="display: none;" /> <!-- Hidden color picker -->
+        <li id="scheduledTasksBtn">Scheduled tasks</li> <!-- Scheduled Tasks -->
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="focus-section">
+        <h2>Today main focus</h2>
+        <h3>Design team meeting</h3>
+
+        <!-- Task Input -->
+        <div class="task-input-container">
+          <div class="color-dots">
+            <span class="dot pink"></span>
+            <span class="dot blue"></span>
+            <span class="dot yellow"></span>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" class="task-input" id="taskInput" placeholder="What is your next task?" onkeydown="handleEnter(event)">
+            <i class="fas fa-clock clock-icon" id="clockIcon"></i>
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <ul class="tasks" id="taskList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
